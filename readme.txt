@@ -13,10 +13,6 @@ A few notes:
 —- BinauralAudio
 —- OutputAudioWAV
 
-- Put the audio files into these directories
-—- RoomImpulses (put the B-Format files in here)
-—- SourceMaterial (put the high hat, Faure cello, and unit impulse in here)
-
 - Start by creating filters for configuration 1. Then createAudioStreams, then synthesizeBinaural, then listenBinaural.  After running through it once, it should be easy to great loudspeaker filters (no audition tool for that).
 
 
