@@ -1,4 +1,6 @@
 A few notes:
+- BSD 3-clause license.
+
 - Most of the functions resynthesize file names as a sort of versioning sanity check. Manually renaming things will likely cause things to break.
 
 - This toolkit corresponds to Part 3 of the DFM papers, URL: http://www.aes.org/e-lib/browse.cfm?elib=19362
@@ -8,11 +10,14 @@ A few notes:
 - You’ll need to set up these subfolders:
 —- ImpulsesAndFilters
 —- PrettyPictures/Data
-—- RoomImpulses
-—- SourceMaterial
 —- BinauralAudio
 —- OutputAudioWAV
 
+- Put the audio files into these directories
+—- RoomImpulses (put the B-Format files in here)
+—- SourceMaterial (put the high hat, Faure cello, and unit impulse in here)
+
+- Start by creating filters for configuration 1. Then createAudioStreams, then synthesizeBinaural, then listenBinaural.  After running through it once, it should be easy to great loudspeaker filters (no audition tool for that).
 
 
 createFiltersDFM(configuration,rngSeed) - this function creates the ensemble of filters for the configuration number specified in getParameterSet(configuration). You will occasionally get fickle filter sets (boomy mid-low frequencies), trying a different random number seed usually fixes this.
