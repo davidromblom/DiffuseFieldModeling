@@ -13,7 +13,7 @@ A few notes:
 —- BinauralAudio
 —- OutputAudioWAV
 
-- Start by creating filters for configuration 1. Then createAudioStreams, then synthesizeBinaural, then listenBinaural.  After running through it once, it should be easy to great loudspeaker filters (no audition tool for that).
+- Start by creating filters for configuration 1. Then createAudioStreams, then synthesizeBinaural, then listenBinaural.  After running through it once, it should be easy to create loudspeaker filters (no audition tool for that).
 
 
 createFiltersDFM(configuration,rngSeed) - this function creates the ensemble of filters for the configuration number specified in getParameterSet(configuration). You will occasionally get fickle filter sets (boomy mid-low frequencies), trying a different random number seed usually fixes this.
