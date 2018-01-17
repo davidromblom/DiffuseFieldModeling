@@ -1,11 +1,10 @@
-A few notes:
-- BSD 3-clause license.
-
-- Most of the functions resynthesize file names as a sort of versioning sanity check. Manually renaming things will likely cause things to break.
-
 - This toolkit corresponds to Part 3 of the DFM papers, URL: http://www.aes.org/e-lib/browse.cfm?elib=19362
 
+- These functions will generate the DFM filters for your favorite loudspeaker configuration or binaural. There is a simple auralizer for binaural. Any implementation based on this filter design needs to have a modestly high-order early reflection engine, as the filters have ~170ms build up of diffuse energy (you could view this as a feature).
+
 - Citation: David Romblom. Diffuse Field Modeling using Physically-Inspired Decorrelation Filters and B-Format Microphones: Improvements to the Filter Design Method. The Journal of the Audio Engineering Society, 65(11):943–953, November 2017.
+
+- BSD 3-clause license.
 
 - You’ll need to set up these subfolders:
 —- ImpulsesAndFilters
@@ -13,8 +12,9 @@ A few notes:
 —- BinauralAudio
 —- OutputAudioWAV
 
-- Start by creating filters for configuration 1. Then createAudioStreams, then synthesizeBinaural, then listenBinaural.  After running through it once, it should be easy to create loudspeaker filters (no audition tool for that).
+- Most of the functions resynthesize file names as a sort of versioning sanity check. Manually renaming things will likely cause things to break.
 
+- Start by creating filters for configuration 1. Then createAudioStreams, then synthesizeBinaural, then listenBinaural.  After running through it once, it should be easy to create loudspeaker filters (no audition tool for that).
 
 createFiltersDFM(configuration,rngSeed) - this function creates the ensemble of filters for the configuration number specified in getParameterSet(configuration). You will occasionally get fickle filter sets (boomy mid-low frequencies), trying a different random number seed usually fixes this.
 
